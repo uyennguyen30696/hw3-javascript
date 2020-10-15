@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password generator</title>
+    <link rel="stylesheet" type ="text/css" href="style.css">
+    <script type='text/javascript' src="javascript.js"></script>
+</head>
+
+<body>
+    <script> src="./javascript.js" </script>
+    <div class="container">
+
+        <header>
+            <h2 id ="title">PASSWORD GENERATOR</h2>
+        </header>
+
+        <div class="options"></div>
+            <!-- Password length is between 8 and 128 characters -->
+            <form class="criteria">
+                <label for="length">Password length</label>
+                <input type="number" id="length" name="password-length">
+            </form>
+            <!-- At least one character type should be selected (lowercase, uppercase, numeric, and/or special characters) -->
+            <!-- Lower case option -->
+            <form>
+                <input type="checkbox" id="lowerCase" name="lowerCase">
+                <label for="lowercase">Include lower case</label><br>
+            </form>
+
+            <!-- Upper case option -->
+            <form>
+                <input type="checkbox" id="upperCase" name="upperCase">
+                <label for="uppercase">Include upper case</label><br>
+            </form>
+
+            <!-- Numeric option -->
+            <form>
+                <input type="checkbox" id="number" name="number">
+                <label for="number">Include numbers</label><br>
+            </form>
+
+            <!-- Spcecial characters option -->
+            <form>
+                <input type="checkbox" id="specialCharacter" name="specialCharacter">
+                <label for="special-character">Include special characters</label><br>
+            </form>
+
+            <!-- Button -->
+            <button id="create">Create</button>
+
+            <!-- Display result box -->
+            <div class="result-container">
+                <input type="display" id="display" name="display-box">
+            </div>
+    </div>
+
+    <!-- GIVEN I need a new, secure password
+    WHEN I click the button to generate a password
+    THEN I am presented with a series of prompts for password criteria
+    WHEN prompted for password criteria
+    THEN I select which criteria to include in the password
+    WHEN prompted for the length of the password
+    THEN I choose a length of at least 8 characters and no more than 128 characters
+    WHEN prompted for character types to include in the password
+    THEN I choose lowercase, uppercase, numeric, and/or special characters
+    WHEN I answer each prompt
+    THEN my input should be validated and at least one character type should be selected
+    WHEN all prompts are answered
+    THEN a password is generated that matches the selected criteria
+    WHEN the password is generated
+    THEN the password is either displayed in an alert or written to the page -->
+    
+</body>
+</html>
