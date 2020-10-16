@@ -12,6 +12,11 @@ The criteria includes:
 </ul>
 
 ## Link:
+https://uyennguyen30696.github.io/hw3-password-generator/
 
+## Note: 
+Ongoing project
+The verion-01 folder contains the simple application that only interact with user through prompt statements.
+The version-02 folder contains the complex application that includes more interactions with user through input, checked boxes, and display on the screen. (Coming soon).
 
 

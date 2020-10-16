@@ -1,3 +1,5 @@
+// Complex version (version 2)
+
 //  GIVEN I need a new, secure password
 //     WHEN I click the button to generate a password
 //     THEN I am presented with a series of prompts for password criteria
@@ -48,55 +50,3 @@
 //     document.getElementById("display".value = password);
 
 // }
-
-// Array of characters
-var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-var number = [0,1,2,3,4,5,6,7,8,9];
-var specialChar = ["~", "!", "@", "#", "$", "%", "&", "*", ".", "/", ":", ";", "<", "=", ">", "?", "_", "{", "[", "}", "]", "|"];
-
-var criteria = [lowerCase, upperCase, number, specialCharacter];
-
-// Choose password length
-var passLength = parseInt(prompt("Choose your password length from 8 to 128 characters"));
-console.log(passLength);
-
-// Confirm the criteria options
-var lowerCase = confirm("Include lower case letters?");
-console.log(lowerCase);
-
-var upperCase = confirm("Include upper case letters?");
-console.log(upperCase);
-
-var number = confirm("Include numbers?");
-console.log(number);
-
-var specialCharacter = confirm("Include special characters?");
-console.log(specialCharacter);
-
-genPass(passLength, lowerCase, upperCase, number, specialCharacter);
-
-// Create function to generate password
-function genPass(passLength, lowerCase, upperCase, number, specialCharacter) {
-    const password = " ";
-    if (lowerCase === true) {
-        genPass.push(lowerCase);
-        console.log(lowerCase);
-    }
-
-    if (upperCase === true) {
-        genPass.push(upperCase);
-    }
-
-    if (number === true) {
-        genPass.push(number);
-    }
-
-    if (specialCharacter === true) {
-        genPass.push(specialCharacter);
-    }
-
-    for (var i = 0; i < passLength; i++) {
-        password = password + criteria.charAt(Math.floor(Math.random() * Math.floor(criteria.length)));
-    }
-}

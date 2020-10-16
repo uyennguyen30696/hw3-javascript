@@ -1,0 +1,25 @@
+/* Simple version (version 1)
+Password is shown in console */
+
+.container {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    margin-top: 50px;
+}
+
+.card-body {
+    padding: 50px;
+}
+
+#password {
+    height: 100px;
+    border: solid 2px;
+    
+}
+
+
