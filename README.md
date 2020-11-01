@@ -12,7 +12,7 @@ The criteria includes:
 </ul>
 
 ## Link:
-https://uyennguyen30696.github.io/hw3-password-generator/
+https://uyennguyen30696.github.io/hw3-password-generator/version-01/index1.html
 
 ## Note: 
 Ongoing project <br>
