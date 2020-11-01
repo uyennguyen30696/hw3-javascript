@@ -1,5 +1,4 @@
 <!-- Simple version (version 1) -->
-<!-- Password is shown in console -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password generator (version 1)</title>
     <link rel="stylesheet" type ="text/css" href="style1.css">
-    <script type="text/javascript" src="script1.js"></script>
+    
 </head>
 
 <body>
@@ -20,11 +19,7 @@
             </header>
 
             <div class="card-body">
-                <textarea
-                id="password"
-                placeholder="Your Secure Password"
-                aria-label="Generated Password"
-                ></textarea>
+                <textarea readonly id="password" placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
             </div>
 
             <div class="card-footer">
@@ -34,5 +29,7 @@
 
     </div>
     
+    <script type="text/javascript" src="script1.js"></script>
 </body>
 </html>
+

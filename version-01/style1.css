@@ -1,15 +1,23 @@
-/* Simple version (version 1)
-Password is shown in console */
+/* Simple version (version 1) */
 
 .container {
     height: 100%;
     margin: 0;
     padding: 0;
     text-align: center;
+    margin: 50px;
+}
+
+.card {
+    background-color: #F5F3F4;
+    padding: 50px;
+    padding-bottom: 200px;
+    box-shadow: 5px 10px #D3D3D3;
 }
 
 header {
-    margin-top: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: green;
 }
 
 .card-body {
@@ -18,8 +26,13 @@ header {
 
 #password {
     height: 100px;
-    border: solid 2px;
-    
+    width: 50%;
+    border: solid 1px;  
+}
+
+#generate {
+    cursor: pointer;
+    background-color: #538D22;
 }
 
 
