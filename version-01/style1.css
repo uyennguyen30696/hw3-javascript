@@ -5,13 +5,14 @@
     margin: 0;
     padding: 0;
     text-align: center;
-    margin: 50px;
+    margin: 30px;
 }
 
 .card {
     background-color: #F5F3F4;
-    padding: 50px;
-    padding-bottom: 200px;
+    margin-top: 10%;
+    padding: 5%;
+    padding-bottom: 100px;
     box-shadow: 5px 10px #D3D3D3;
 }
 
@@ -20,8 +21,9 @@ header {
     color: green;
 }
 
-.card-body {
-    padding: 50px;
+textarea {
+    text-align: center;
+    font-size: 1.5em;
 }
 
 #password {
@@ -33,6 +35,8 @@ header {
 #generate {
     cursor: pointer;
     background-color: #538D22;
+    margin: 20px;
+    padding: 5px;
+    border-color: transparent;
+    color: white;
 }
-
-
