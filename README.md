@@ -10,7 +10,11 @@ Check out the deploy links of the two versions belows:
 
 * [Version 1](https://uyennguyen30696.github.io/hw3-password-generator/version-01/index1.html)
 
-* [Version 2] (https://uyennguyen30696.github.io/hw3-password-generator/version-02/index2.html)
+![screenshot](./images/version-1.png)
+
+* [Version 2](https://uyennguyen30696.github.io/hw3-password-generator/version-02/index2.html)
+
+![screenshot](./images/version-2.png)
 ### Version 1
 
 Click the button to generate a password
