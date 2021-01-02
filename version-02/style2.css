@@ -1,9 +1,38 @@
 /* Complex version (verison 2) */
 
-#title {
+.container {
+    margin-left: 18%;
+    margin-right: 18%;
+    padding: 7%;
+}
+h2 {
+    padding: 15px;
+    text-align: center;
+    background-color: #8A0512;
+    color: white;
+}
+hr {
+    height: 3px !important;
+    color: #8A0512 !important;
+}
+form {
+    padding: 15%;
+    padding-top: 0;
+}
+#generate {
+    border: transparent;
+    padding: 10px;
+    background-color: #8A0512;
+    color: white;
+}
+#dashed {
+    border: dashed 2px #8A0512;
+    height: 60px;
     text-align: center;
 }
-
-.container {
-    text-align: center;
+#display {
+    position: relative;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    height: 50px;
 }

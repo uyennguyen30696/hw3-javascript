@@ -1,58 +1,93 @@
 // Complex version (version 2)
 
-//  GIVEN I need a new, secure password
-//     WHEN I click the button to generate a password
-//     THEN I am presented with a series of prompts for password criteria
-//     WHEN prompted for password criteria
-//     THEN I select which criteria to include in the password
-//     WHEN prompted for the length of the password
-//     THEN I choose a length of at least 8 characters and no more than 128 characters
-//     WHEN prompted for character types to include in the password
-//     THEN I choose lowercase, uppercase, numeric, and/or special characters
-//     WHEN I answer each prompt
-//     THEN my input should be validated and at least one character type should be selected
-//     WHEN all prompts are answered
-//     THEN a password is generated that matches the selected criteria
-//     WHEN the password is generated
-//     THEN the password is either displayed in an alert or written to the page 
+$(document).ready(function () {
 
-// Password length is between 8 and 128 characters.
-// At least one character type should be selected (lowercase, uppercase, numeric, and/or special characters).
+    // $(".select2").select2();
 
-// Array of characters
-// var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-// var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-// var specialChar = ["~", "!", "@", "#", "$", "%", "&", "*", ".", "/", ":", ";", "<", "=", ">", "?", "_", "{", "[", "}", "]", "|"];
-// var length = [0,1,2,3,4,5,6,7,8,9];
+    let lowerCase = document.querySelector("#lowerCase");
+    let upperCase = document.querySelector("#upperCase");
+    let number = document.querySelector("#number");
+    let specialChar = document.querySelector("#special-character");
 
-// var criteria = [lowerCase, upperCase, specialChar, number];
+    var lowerCaseArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+    var upperCaseArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+    var numberArray = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+    var specialCharArray = ["~", "!", "@", "#", "$", "%", "&", "*", ".", "/", ":", ";", "<", "=", ">", "?", "_", "{", "[", "}", "]", "|"];
 
-// use the ASCII Character Codes Table & Cheat Sheet instead
+    // Get random characters from the array
+    function getRandom(arr) {
+        var randomIndex = Math.floor(Math.random() * arr.length);
+        var randomChar = arr[randomIndex];
+        return randomChar;
+    };
 
-// Event listener to take value for the function
-// document.addEventListener("input", generatePassword);
-// document.addEventListener("click"), generatePassword;
+    function genPass() {
 
-// // Function that generates random password
-// function generatePassword() {
+        possibleArray = [];
+        guaranteedArray = [];
+        password = [];
 
-//     // Input password length value
-//     const length = document.getElementById("length").value;
-//     // Checked criteria boxes
-//     const lowerCase = document.getElementById("lowerCase").checked;
-//     const upperCase = document.getElementById("upperCase").checked;
-//     const number = document.getElementById("number").checked;
-//     const specialCharacter = document.getElementById("specialCharacter").checked;
+        var passLength = document.querySelector("#length").value;
 
-//     const password = generatePassword(length, lowerCase, upperCase, number, specialCharacter);
+        var chosenChar = {
+            passLength: passLength,
+            lowerCase: lowerCase,
+            upperCase: upperCase,
+            number: number,
+            specialChar: specialChar
+        };
 
-//     // Add generated password to display box
-//     document.getElementById("display".value = password);
+        if (lowerCase.checked) {
+            possibleArray = possibleArray.concat(lowerCaseArray);
+            guaranteedArray.push(getRandom(lowerCaseArray));
+        };
 
-// }
+        if (upperCase.checked) {
+            possibleArray = possibleArray.concat(upperCaseArray);
+            guaranteedArray.push(getRandom(upperCaseArray));
+        };
 
-var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-var specialCharacters = ["~", "!", "@", "#", "$", "%", "&", "*", ".", "/", ":", ";", "<", "=", ">", "?", "_", "{", "[", "}", "]", "|"];
-var numericCharacters = ["0","1","2","3","4","5","6","7","8","9"];
+        if (number.checked) {
+            possibleArray = possibleArray.concat(numberArray);
+            guaranteedArray.push(getRandom(numberArray));
+        };
 
+        if (specialChar.checked) {
+            possibleArray = possibleArray.concat(specialCharArray);
+            guaranteedArray.push(getRandom(specialCharArray));
+        };
+
+        // Iterate over the password length from the chosen characters in the possible array to the resulted password
+        for (var i = 0; i < chosenChar.passLength; i++) {
+            password.push(getRandom(possibleArray));
+        };
+
+        // Mix the guaranteed characters from the guaranteed array to the resulted password
+        for (var i = 0; i < guaranteedArray.length; i++) {
+            password[i] = guaranteedArray[i];
+        };
+
+        // Join the characters from the possible array and the guaranteed array to form the resulted password
+        return password.join("");
+    };
+
+    function displayPass() {
+
+        var display = genPass();
+        var displayBox = document.querySelector("#display");
+        displayBox.textContent = display;
+
+        if (lowerCase.checked === false &&
+            upperCase.checked === false &&
+            number.checked === false &&
+            specialChar.checked === false) {
+            $("#alert").text("* Password must contain at least one character type.");
+        };
+    };
+
+    $("#generate").on("click", function (event) {
+        event.preventDefault();
+        $("#alert").text("");
+        displayPass();
+    });
+});

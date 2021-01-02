@@ -132,3 +132,4 @@ function displayPass() {
 }
 
 generateButton.addEventListener("click", displayPass);
+
