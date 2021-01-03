@@ -28,4 +28,4 @@ The criteria includes:
 
 ### Version 2
 
-A form in presented to the user to choose the character types for the password, including password length from a dropdown list, lowercase, uppercase, numeric, and special characters in a series of checkboxes. The password length ranges from 8 to 20 characters. A random password is generated which includes the chosen criteria will be displayed in the dashed box at the bottom of the form.
+A form in presented to the user to choose the character types for the password, including password length from a dropdown list, lowercase, uppercase, numeric, and special characters in a series of checkboxes. The password length ranges from 8 to 20 characters. A random password is generated which includes the chosen criteria will be displayed in the dashed box at the bottom of the form. The generated password can be copied to clipboard by clicking the clipboard icon.

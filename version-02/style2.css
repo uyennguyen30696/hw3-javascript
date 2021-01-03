@@ -36,3 +36,15 @@ form {
     margin-bottom: 2%;
     height: 50px;
 }
+#clipboard {
+    position: relative;
+    float: right;
+    border-color: transparent;
+    background-color: #8A0512;
+    color: white;
+    padding: 16px;
+    z-index: 1;
+}
+#result {
+    /* border-color: transparent; */
+}

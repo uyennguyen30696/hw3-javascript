@@ -73,9 +73,24 @@ $(document).ready(function () {
 
     function displayPass() {
 
-        var display = genPass();
-        var displayBox = document.querySelector("#display");
-        displayBox.textContent = display;
+        let display = genPass();
+        let displayBox = document.querySelector("#display");
+        let result = displayBox.textContent = display;
+
+        let clipboard = document.querySelector("#clipboard");
+        clipboard.addEventListener("click", function () {
+            let textarea = document.createElement("textarea");
+            textarea.textContent = result;
+
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand("copy");
+            textarea.remove();
+            if (!result) {
+                return;
+            };
+            alert('Password copied to clipboard');
+        });
 
         if (lowerCase.checked === false &&
             upperCase.checked === false &&
