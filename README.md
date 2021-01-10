@@ -1,3 +1,5 @@
+# 03 JavaScript: Password Generator
+
 ## Purpose
 
 In this project, an application is created to generate a random password based on selected criteria. This application is run in the browser, and will utilize HTML and CSS, powered by JavaScript. 
@@ -8,11 +10,11 @@ There are two versions of this application, one is simple with prompt and one is
 <br>
 Check out the deploy links of the two versions belows:
 
-* [Version 1](https://uyennguyen30696.github.io/hw3-password-generator/version-01/index1.html)
+* [Version 1](https://uyennguyen30696.github.io/password-generator/version-01/index1.html)
 
 ![screenshot](./images/version-1.png)
 
-* [Version 2](https://uyennguyen30696.github.io/hw3-password-generator/version-02/index2.html)
+* [Version 2](https://uyennguyen30696.github.io/password-generator/version-02/index2.html)
 
 ![screenshot](./images/version-2.png)
 ### Version 1
